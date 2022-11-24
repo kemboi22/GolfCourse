@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1D2E1777-3696-4B5D-AC11-0A32AE5A900E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GolfCourse</RootNamespace>
+    <AssemblyName>GolfCourse</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>0</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CompetitionResults.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CompetitionResults.Designer.cs">
+      <DependentUpon>CompetitionResults.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Connection.cs" />
+    <Compile Include="CourseInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CourseInformation.Designer.cs">
+      <DependentUpon>CourseInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GolfEquipments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GolfEquipments.Designer.cs">
+      <DependentUpon>GolfEquipments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Golfers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Golfers.Designer.cs">
+      <DependentUpon>Golfers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocalRules.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocalRules.Designer.cs">
+      <DependentUpon>LocalRules.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MembershipInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MembershipInfo.Designer.cs">
+      <DependentUpon>MembershipInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tournaments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tournaments.Designer.cs">
+      <DependentUpon>Tournaments.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CompetitionResults.resx">
+      <DependentUpon>CompetitionResults.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CourseInformation.resx">
+      <DependentUpon>CourseInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GolfEquipments.resx">
+      <DependentUpon>GolfEquipments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Golfers.resx">
+      <DependentUpon>Golfers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalRules.resx">
+      <DependentUpon>LocalRules.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MembershipInfo.resx">
+      <DependentUpon>MembershipInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Tournaments.resx">
+      <DependentUpon>Tournaments.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
